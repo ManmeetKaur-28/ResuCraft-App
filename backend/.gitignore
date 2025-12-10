@@ -1,0 +1,53 @@
+
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build / Dist files
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+
+# Coverage (from testing)
+coverage/
+.nyc_output/
+
+# Debugging files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# TypeScript (if using TS)
+*.tsbuildinfo
+
+# Uploaded files (if your backend stores uploads locally)
+uploads/
+public/uploads/
+
+# Cache
+.cache/
+.eslintcache
