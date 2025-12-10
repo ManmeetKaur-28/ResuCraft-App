@@ -11,8 +11,8 @@
     "author": "Manmeet Kaur",
     "license": "ISC",
     "dependencies": {
+        "@sparticuz/chromium": "^143.0.0",
         "bcrypt": "^6.0.0",
-        "chrome-aws-lambda": "^10.1.0",
         "cloudinary": "^2.8.0",
         "cookie-parser": "^1.4.7",
         "cors": "^2.8.5",
@@ -25,6 +25,6 @@
         "openai": "^6.10.0",
         "pdf-parse": "^2.4.5",
         "prettier": "^3.7.4",
-        "puppeteer-core": "^10.1.0"
+        "puppeteer-core": "^24.32.1"
     }
 }

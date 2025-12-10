@@ -1,11 +1,10 @@
 import puppeteer from "puppeteer-core";
-import chromium from "chrome-aws-lambda";
+import chromium from "@sparticuz/chromium";
 
 export const htmlToPdf = async (htmlString) => {
-    const executablePath = await chromium.executablePath;
     const browser = await puppeteer.launch({
-        executablePath,
-        args: [...chromium.args, "--no-sandbox"],
+        executablePath: await chromium.executablePath(),
+        args: chromium.args,
         headless: chromium.headless,
         defaultViewport: chromium.defaultViewport,
     });
