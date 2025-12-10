@@ -15,6 +15,7 @@ const analyseResume = async (role, jobDesc, resumeText) => {
     });
 
     const content = response.choices[0]?.message?.content?.trim() || {};
+    console.log(content);
     const result = JSON.parse(content);
 
     return result;
