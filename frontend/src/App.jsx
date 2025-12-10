@@ -13,9 +13,12 @@ function App() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get("/api/v1/user/verify", {
-          withCredentials: true,
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/verify`,
+          {
+            withCredentials: true,
+          }
+        );
         dispatch(login());
       } catch (error) {
         console.log(error);
