@@ -1,5 +1,5 @@
-import Footer from "./footer/footer";
-import Header from "./header/header";
+import Footer from "./footer/Footer";
+import Header from "./header/Header";
 import Home from "./home/Home";
 import Login from "./login/Login";
 import Signup from "./signup/Signup";
