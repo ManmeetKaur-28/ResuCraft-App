@@ -26,7 +26,6 @@ function Profile() {
         setUserInfo(fetchedUserInfo.data.data);
         setResumes(fetchedResumes.data.data);
       } catch (error) {
-        console.log(error);
         console.log(error.response.data.message);
       }
     };
@@ -56,7 +55,6 @@ function Profile() {
       );
       setResumes(fetchedResumes.data.data);
     } catch (error) {
-      console.log(error);
       setError(error.response.data.message);
     }
   };

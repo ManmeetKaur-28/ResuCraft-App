@@ -3,7 +3,6 @@ import React from "react";
 function AnalysisCard({ analytics, currState }) {
   const temp = analytics.filter((item) => item._id == currState);
   const matchedAnalysis = temp[0];
-  console.log(matchedAnalysis);
 
   return (
     <div className="border border-blue-300 bg-linear-to-br from-blue-50 to-blue-100 rounded-xl shadow-md p-6 space-y-6">
