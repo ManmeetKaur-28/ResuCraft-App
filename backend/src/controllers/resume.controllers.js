@@ -10,7 +10,6 @@ import { htmlToPdf } from "../services/htmlToPdf.js";
 import mongoose from "mongoose";
 
 const getResumeInfo = asyncHandler(async (req, res, next) => {
-    //name , file , preview , analytics ->give back them
     const userId = req.user?._id;
     if (!userId) {
         throw new ApiError(
@@ -83,13 +82,10 @@ const addAnalysisInfo = asyncHandler(async (req, res, next) => {
     const resumefile = resume.file;
 
     const parser = new PDFParse({ url: resumefile });
-    console.log("Parser: ", parser); // parser console.log ================
 
     const result = await parser.getText();
-    console.log("result : ", result); //result console log ======================
 
     const resumeText = result.text;
-    console.log("resumetext :", resumeText); // resume text console.log ========
 
     await parser.destroy();
 
@@ -145,19 +141,19 @@ const addAnalysisInfo = asyncHandler(async (req, res, next) => {
         newResumeWithAnalysis.analytics[
             newResumeWithAnalysis.analytics.length - 1
         ];
+
     const addedAnalysisId = addedAnalysis._id;
-    return res
-        .status(200)
-        .json(
-            new ApiResponse(
-                200,
-                {
-                    resumeInfo: newResumeWithAnalysis,
-                    newAnalysisId: addedAnalysisId,
-                },
-                "new analysis of user's resume done successfully"
-            )
-        );
+
+    return res.status(200).json(
+        new ApiResponse(
+            200,
+            {
+                resumeInfo: newResumeWithAnalysis,
+                newAnalysisId: addedAnalysisId,
+            },
+            "new analysis of user's resume done successfully"
+        )
+    );
 });
 
 export { getResumeInfo, addAnalysisInfo };
