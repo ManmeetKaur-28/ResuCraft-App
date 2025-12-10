@@ -1,7 +1,7 @@
 # ResuCraft
 
 ResuCraft is a modern resume optimization platform designed to help job seekers **beat the ATS, impress recruiters, and own their career**.  
-It provides instant resume analysis, keyword matching, ATS scoring, and actionable suggestions — all wrapped in a clean, accessible, bluish‑gray themed UI.
+It provides instant resume analysis, keyword matching, ATS scoring, and actionable suggestions to level up your resume, and land the interviews.
 
 ---
 
