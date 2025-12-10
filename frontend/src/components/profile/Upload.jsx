@@ -27,7 +27,7 @@ function Upload({ uploadResume }) {
       setName("My Resume");
       setFile(null);
     } catch (error) {
-      // console.log(error);
+      console.log(error);
     }
     setButtonName("Upload");
   };
