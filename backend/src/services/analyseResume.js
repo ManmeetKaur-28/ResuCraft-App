@@ -14,9 +14,13 @@ const analyseResume = async (role, jobDesc, resumeText) => {
         temperature: 0,
     });
 
-    const content = response.choices[0]?.message?.content?.trim() || {};
-    console.log(content);
-    const result = JSON.parse(content);
+    const content = response.choices[0]?.message?.content
+        ?.replace(/```json|```/g, "")
+        ?.trim();
+
+    console.log("Content : ", content);
+
+    const result = content ? JSON.parse(content) : {};
 
     return result;
 };
