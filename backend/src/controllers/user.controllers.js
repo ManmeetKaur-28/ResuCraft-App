@@ -201,15 +201,15 @@ const uploadResume = asyncHandler(async (req, res, next) => {
     }
 
     const { name = "Resume" } = req.body;
-    const localFilePath = req.file?.path;
-    if (!localFilePath) {
+    const buffer = req.file?.buffer;
+    if (!buffer) {
         throw new ApiError(
             400,
-            "error occurred while uplaoding file locally using multer"
+            "error occurred while uplaoding file using multer to storage"
         );
     }
 
-    const cloudResponse = await uploadOnCloudinary(localFilePath);
+    const cloudResponse = await uploadOnCloudinary(buffer);
 
     if (!cloudResponse) {
         throw new ApiError(

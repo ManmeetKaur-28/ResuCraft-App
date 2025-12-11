@@ -1,13 +1,5 @@
 import multer from "multer";
-import path from "path";
-const uploadPath = path.join(process.cwd(), "public", "temp");
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        return cb(null, uploadPath);
-    },
-    filename: function (req, file, cb) {
-        return cb(null, `${req.user?._id}_${file.originalname}`);
-    },
+export const upload = multer({
+    storage: multer.memoryStorage(),
+    limits: { fileSize: 15 * 1024 * 1024 },
 });
-
-export const upload = multer({ storage: storage });
