@@ -201,6 +201,10 @@ const uploadResume = asyncHandler(async (req, res, next) => {
     }
 
     const { name = "Resume" } = req.body;
+
+    console.log("REQ FILE:", req.file);
+    console.log("BUFFER SIZE:", req.file?.buffer?.length);
+
     const buffer = req.file?.buffer;
     if (!buffer) {
         throw new ApiError(
