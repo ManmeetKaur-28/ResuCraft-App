@@ -8,12 +8,12 @@ cloudinary.config({
 const uploadOnCloudinary = async (buffer) => {
     try {
         console.log("Buffer :", buffer);
-        const base64 = buffer.toString("base64");
-        const dataUri = `data:application/pdf;base64;${base64}`;
-        const result = await cloudinary.uploader.upload(dataUri, {
-            resource_type: "auto",
-            folder: "resumes",
-            pages: true,
+        const result = await new Promise((resolve, reject) => {
+            const stream = cloudinary.uploader.upload_stream(
+                { resource_type: "auto", folder: "resumes" },
+                (err, res) => (err ? reject(err) : resolve(res))
+            );
+            stream.end(buffer);
         });
         const publicId = result.public_id;
 
