@@ -7,6 +7,7 @@ cloudinary.config({
 
 const uploadOnCloudinary = async (buffer) => {
     try {
+        console.log("Buffer :", buffer);
         const base64 = buffer.toString("base64");
         const dataUri = `data:application/pdf;base64;${base64}`;
         const result = await cloudinary.uploader.upload(dataUri, {
