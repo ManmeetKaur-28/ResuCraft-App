@@ -29,7 +29,7 @@ const uploadOnCloudinary = async (buffer) => {
     } catch (error) {
         console.log(
             "error occurred while uploading file on cloudinary :: ",
-            error.message
+            error
         );
         return null;
     }
