@@ -69,8 +69,6 @@ npm install
 npm run dev
 ```
 
-4. Access the app at "herreeeeeeeee"
-
 ---
 
 ## 🛠️ Future Improvements
