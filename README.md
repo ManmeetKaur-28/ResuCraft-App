@@ -54,7 +54,7 @@ It provides instant resume analysis, keyword matching, ATS scoring, and actionab
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/resucraft.git
+git clone https://github.com/ManmeetKaur-28/ResuCraft-App.git
 ```
 
 2. Install dependenices
