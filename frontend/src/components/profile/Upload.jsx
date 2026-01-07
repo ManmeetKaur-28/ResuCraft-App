@@ -23,7 +23,7 @@ function Upload({ uploadResume }) {
       const formData = new FormData();
       formData.append("name", name);
       formData.append("resumeFile", file);
-      await uploadResume(formData);
+      uploadResume(formData);
       setName("My Resume");
       setFile(null);
     } catch (error) {

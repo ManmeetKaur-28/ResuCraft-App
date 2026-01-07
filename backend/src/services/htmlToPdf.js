@@ -1,13 +1,7 @@
-import puppeteer from "puppeteer-core";
-import chromium from "@sparticuz/chromium";
+import puppeteer from "puppeteer";
 
 export const htmlToPdf = async (htmlString) => {
-    const browser = await puppeteer.launch({
-        executablePath: await chromium.executablePath(),
-        args: chromium.args,
-        headless: chromium.headless,
-        defaultViewport: chromium.defaultViewport,
-    });
+    const browser = await puppeteer.launch({});
     const page = await browser.newPage();
 
     await page.setContent(htmlString, { waitUntil: "networkidle0" });

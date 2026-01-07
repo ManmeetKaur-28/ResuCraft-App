@@ -7,7 +7,6 @@ cloudinary.config({
 
 const uploadOnCloudinary = async (buffer) => {
     try {
-        console.log("Buffer :", buffer);
         const result = await new Promise((resolve, reject) => {
             const stream = cloudinary.uploader.upload_stream(
                 { resource_type: "auto", folder: "resumes" },
