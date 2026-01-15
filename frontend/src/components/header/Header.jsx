@@ -20,9 +20,10 @@ function Header() {
       <div className="bg-[#00072d] text-gray-100 shadow-md h-25 px-9 py-4 flex items-center justify-between w-full mx-auto text-lg">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
-          <div className="font-['Unna'] text-xl font-bold text-blue-100 tracking-wide">
-            Logo
+          <div className="w-10 ">
+            <Logo />
           </div>
+          <h1 className="font-mono">ResuCraft</h1>
         </div>
 
         {/* Navigation Section */}

@@ -29,7 +29,6 @@ function Signup() {
   return (
     <div className="bg-[#111e38] m-15 py-10 px-8 md:w-1/2 w-2/3 mx-auto rounded-xl shadow-lg">
       <div className="text-center text-white">
-        <p className="font-sans text-lg">LOGO</p>
         <h1 className="font-['Unna'] text-4xl pt-4 pb-2 inline-block text-center text-blue-100">
           Welcome to ResuCraft !
         </h1>
