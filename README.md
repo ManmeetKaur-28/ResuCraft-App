@@ -39,6 +39,33 @@ It provides instant resume analysis, keyword matching, ATS scoring, and actionab
 
 ---
 
+## 👀 WALKTHROUGH
+
+**Home Page**
+
+![ABOUT RESUCRAFT](./preview/info1.png)
+![ABOUT CONTINUED](./preview/info2.png)
+
+**Dashboard**
+
+![UI IMAGE](./preview/ui.png)
+
+**File Uploading**
+
+![FILE UPLOAD IMAGE](./preview/uploadfile.png)
+![FILE PREVIEW IMAGE](./preview/filepreview.png)
+
+**Entering Job Description**
+
+![ENTER JOB DESC IMAGE](./preview/addjd.png)
+
+**Detailed AI Analysis**
+
+![ANALYSIS PART 1 IMAGE](./preview/analysis1.png)
+![ANALYSIS PART 2 IMAGE](./preview/analysis2.png)
+
+---
+
 ## ⚙️ Tech Stack
 
 - **Frontend:** React, React Router, Redux Toolkit, React Hook Form
